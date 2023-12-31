@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add any additional styles here if needed */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+
+    <section id="courseSection">
+        <h2>Courses</h2>
+        <!-- Form to add course -->
+        <form id="courseForm">
+            <label for="courseID">Course ID:</label>
+            <input type="text" id="courseID" placeholder="Enter the course ID" required>
+            <label for="courseName">Course Name:</label>
+            <input type="text" id="courseName" placeholder="Enter the course name" required>
+            <label for="pointScale">Select Point Scale:</label>
+            <select id="pointScale" required>
+                <option value="10">10 Point Scale</option>
+                <option value="7">7 Point Scale</option>
+            </select>
+            <button type="button" onclick="addCourse()">Add Course</button>
+        </form>
+        <!-- Dropdown menu to select course (deleted as per your request) -->
+    </section>
+
+    <section id="studentSection">
+        <h2>Students</h2>
+        <!-- Form to add new student and scores -->
+        <form id="studentForm">
+            <label for="studentID">Student ID:</label>
+            <input type="text" id="studentID" placeholder="Enter the student ID" required>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" placeholder="Enter the student name" required>
+            <label for="studentSurname">Student Surname:</label>
+            <input type="text" id="studentSurname" placeholder="Enter the student surname" required>
+            <label for="midtermScore">Midterm Score:</label>
+            <input type="number" id="midtermScore" placeholder="Enter the midterm score" required>
+            <label for="finalScore">Final Score:</label>
+            <input type="number" id="finalScore" placeholder="Enter the final score" required>
+            <button type="button" onclick="addStudent()">Add Student</button>
+        </form>
+        <!-- Table to view student scores -->
+        <table id="studentTable">
+            <!-- Table headers will be dynamically populated in script.js -->
+            <thead>
+                <tr>
+                    <!-- Table headers will be dynamically populated in script.js -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically populated in script.js -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="searchSection">
+        <h2>Search</h2>
+        <!-- Form to search for student scores -->
+        <form id="searchForm">
+            <label for="searchStudent">Search Student:</label>
+            <input type="text" id="searchStudent" placeholder="Enter the student name and surname" required>
+            <button type="button" onclick="searchStudent()">Search</button>
+        </form>
+        <!-- Table to display search results for students -->
+        <table id="searchTable">
+            <!-- Table headers and rows will be dynamically populated in script.js -->
+        </table>
+
+        <!-- Form to search for courses -->
+        <form id="searchCourseForm">
+            <label for="searchCourse">Search Course:</label>
+            <input type="text" id="searchCourse" placeholder="Enter the course ID" required>
+            <button type="button" onclick="searchCourse()">Search</button>
+        </form>
+        <!-- Table to display search results for courses -->
+        <table id="searchCourseTable">
+            <!-- Table headers and rows will be dynamically populated in script.js -->
+        </table>
+    </section>
+     <!-- View section -->
+     <section id="viewSection">
+        <h2>View</h2>
+        <!-- Dropdown for courses -->
+        <label for="viewCourses">Courses:</label>
+        <select id="viewCourses">
+            <!-- Options will be dynamically populated in script.js -->
+        </select>
+
+        <!-- Dropdown for filtering students -->
+        <label for="filterStudents">Filter Students:</label>
+        <select id="filterStudents">
+            <option value="failed">Failed Students</option>
+            <option value="passed">Passed Students</option>
+            <option value="noFilter">No Filter</option>
+        </select>
+<!-- Detailed Statistics with radio buttons -->
+<div id="detailedStatsContainer">
+    <p>Detailed Statistics</p>
+    <div class="radioBox">:
+        <label for="yesRadio">Yes</label>
+        <input type="radio" id="yesRadio" name="detailedStats" value="yes">
+        <label for="noRadio">No</label>
+        <input type="radio" id="noRadio" name="detailedStats" value="no" checked>
+    </div>
+</div>
+
+    </section>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
