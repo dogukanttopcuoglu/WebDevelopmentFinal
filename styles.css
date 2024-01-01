@@ -98,7 +98,9 @@ button:active{
 table {
     width: 100%;
     border-collapse: collapse;
+    overflow: auto;
     margin-top: 10px;
+
 }
 
 table, th, td {
@@ -109,17 +111,36 @@ th, td {
     padding: 10px;
     text-align: left;
 }
+th:nth-child(even){
+    background-color: gray;
+}
+td:nth-child(even){
+    background-color: gray;
+}
 #detailedStatsContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
 
 }
+#lectureButton{
+    width: 100%;
+
+
+
+}
 
 #detailedStatsContainer > p{
     margin-right: .5rem;
-    display: flex;
     align-items: center;
+}
+#detailedStatsContainer {
+    display: flex;
+    flex-direction: column;
+}
+#detailedTable{
+    display: flex;
+    flex-direction: column;
 }
 
 .radioBox{
